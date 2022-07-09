@@ -38,12 +38,15 @@ augroup END
 
 " ---------- FZF
 nnoremap <C-p> :Files<Cr>
-let g:fzf_layout = { 'down': '40%' }
+let g:fzf_layout = { 'down': '75%' }
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
+
+" ---------- Vim Fugitive
+nnoremap <leader>d :Gvdiffsplit<CR>
 
 " ---------- NERDTree
 let NERDTreeShowHidden=1
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize=50
 
 nnoremap <leader>n :NERDTreeFind <bar> wincmd w<CR>
 nnoremap <leader>t :NERDTreeToggle <bar> wincmd w<CR>
