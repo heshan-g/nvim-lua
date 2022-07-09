@@ -8,10 +8,31 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 call plug#end()
 
+filetype plugin indent on
 syntax on
 colorscheme gruvbox
-
+set background=dark
+set colorcolumn=80
+set termguicolors
+highlight ColorColumn ctermbg=236 guibg=#303030
 set number relativenumber
+set nowrap
+set smartcase
+set smartindent
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set incsearch
+set ignorecase
+set noerrorbells
+set mouse=a
+
+" Stop highlighting after searching finishes
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter /,\? :set hlsearch
+  autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
 
 " ---------- NERDTree
 let NERDTreeShowHidden=1
@@ -36,3 +57,4 @@ endfunction
 
 " Highlight currently open buffer in NERDTree
 autocmd BufRead * call SyncTree()
+
