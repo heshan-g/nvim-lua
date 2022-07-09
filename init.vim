@@ -4,7 +4,9 @@ let mapleader=" "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -26,6 +28,8 @@ set shiftwidth=2
 set expandtab
 set incsearch
 set ignorecase
+set signcolumn=yes
+set updatetime=0
 set noerrorbells
 set mouse=a
 
