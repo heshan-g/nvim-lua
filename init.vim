@@ -12,9 +12,15 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+Plug 'moll/vim-bbye'
 call plug#end()
 
 filetype plugin indent on
+set encoding=UTF-8
 syntax on
 colorscheme gruvbox
 set background=dark
@@ -45,6 +51,23 @@ augroup END
 " ---------- Conquer of Completion
 source $HOME/.config/nvim/coc.vim
 
+" ---------- Bufferline (and Bbye)
+source $HOME/.config/nvim/bufferline.vim
+
+nnoremap <nowait> <Leader>q :Bdelete<CR>
+nnoremap L :call BufferNext()<CR>
+nnoremap H :call BufferPrev()<CR>
+
+function BufferNext()
+  BufferLineCycleNext
+  call SyncTree()
+endfunction
+
+function BufferPrev()
+  BufferLineCyclePrev
+  call SyncTree()
+endfunction
+
 " ---------- FZF
 nnoremap <C-p> :Files<Cr>
 let g:fzf_layout = { 'down': '75%' }
@@ -55,7 +78,8 @@ nnoremap <leader>d :Gvdiffsplit<CR>
 
 " ---------- NERDTree
 let NERDTreeShowHidden=1
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinSize=40
+" let g:NERDTreeLimitedSyntax=1 " enable for a slight performace improvement
 
 nnoremap <leader>n :NERDTreeFind <bar> wincmd w<CR>
 nnoremap <leader>t :NERDTreeToggle <bar> wincmd w<CR>
