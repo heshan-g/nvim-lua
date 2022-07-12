@@ -12,9 +12,6 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'moll/vim-bbye'
 call plug#end()
@@ -54,6 +51,7 @@ source $HOME/.config/nvim/coc.vim
 " ---------- Bufferline (and Bbye)
 source $HOME/.config/nvim/bufferline.vim
 
+nnoremap <leader>b :Buffers<CR>
 nnoremap <nowait> <Leader>q :Bdelete<CR>
 nnoremap L :call BufferNext()<CR>
 nnoremap H :call BufferPrev()<CR>
