@@ -72,7 +72,16 @@ let g:fzf_layout = { 'down': '75%' }
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 
 " ---------- Vim Fugitive
-nnoremap <leader>d :Gvdiffsplit<CR>
+nnoremap <leader>d :call DiffSplit()<CR>
+
+function DiffSplit()
+  if IsNERDTreeOpen()
+    NERDTreeToggle
+    Gvdiffsplit
+  else
+    Gvdiffsplit
+  endif
+endfunction
 
 " ---------- NERDTree
 let NERDTreeShowHidden=1
