@@ -4,6 +4,8 @@ let mapleader=" "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/everforest'
+Plug 'whatyouhide/vim-gotham'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -19,11 +21,11 @@ call plug#end()
 filetype plugin indent on
 set encoding=UTF-8
 syntax on
-colorscheme gruvbox
+colorscheme gotham
 set background=dark
 set colorcolumn=80
 set termguicolors
-highlight ColorColumn ctermbg=236 guibg=#303030
+highlight ColorColumn ctermbg=233 guibg=#121212
 set number relativenumber
 set nowrap
 set smartcase
@@ -71,7 +73,9 @@ nnoremap <C-p> :Files<Cr>
 let g:fzf_layout = { 'down': '75%' }
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 
-" ---------- Vim Fugitive
+" ---------- Vim Fugitive & Git Gutter
+let g:gitgutter_async=0
+
 nnoremap <leader>d :call DiffSplit()<CR>
 
 function DiffSplit()
