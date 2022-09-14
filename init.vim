@@ -21,7 +21,7 @@ call plug#end()
 filetype plugin indent on
 set encoding=UTF-8
 syntax on
-colorscheme gotham
+colorscheme gruvbox
 set background=dark
 set colorcolumn=80
 set termguicolors
