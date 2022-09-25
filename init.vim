@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'moll/vim-bbye'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 filetype plugin indent on
