@@ -43,6 +43,18 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
 
+  -- Managing and installing lsp servers
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
+  -- Configuring lsp servers
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
+  use 'jose-elias-alvarez/typescript.nvim'
+  use 'onsails/lspkind.nvim'
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
