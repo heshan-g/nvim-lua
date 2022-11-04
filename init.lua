@@ -8,6 +8,8 @@ require('plugin-configs.lsp.mason')
 require('plugin-configs.lsp.lspsaga')
 require('plugin-configs.lsp.lspconfig')
 require('plugin-configs.lsp.null-ls')
+require('plugin-configs.autopairs')
+require('plugin-configs.treesitter')
 
 require('configs.options')
 require('configs.keymaps')
