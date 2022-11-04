@@ -11,6 +11,7 @@ require('plugin-configs.lsp.null-ls')
 require('plugin-configs.autopairs')
 require('plugin-configs.treesitter')
 require('plugin-configs.gitsigns')
+require('plugin-configs.bufferline')
 
 require('configs.options')
 require('configs.keymaps')
