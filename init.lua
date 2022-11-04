@@ -7,6 +7,7 @@ require('plugin-configs.nvim-cmp')
 require('plugin-configs.lsp.mason')
 require('plugin-configs.lsp.lspsaga')
 require('plugin-configs.lsp.lspconfig')
+require('plugin-configs.lsp.null-ls')
 
 require('configs.options')
 require('configs.keymaps')

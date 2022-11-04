@@ -8,3 +8,10 @@ require('mason-lspconfig').setup({
     'sumneko_lua'
   }
 })
+
+require('mason-null-ls').setup({
+  ensure_installed = {
+    'prettier',
+    'eslint_d',
+  }
+})

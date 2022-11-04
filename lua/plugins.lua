@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
 
-  -- Managing and installing lsp servers
+  -- Managing and installing lsp servers, linters & formatters
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
 
@@ -53,6 +53,10 @@ return require('packer').startup(function(use)
   use({ 'glepnir/lspsaga.nvim', branch = 'main' })
   use 'jose-elias-alvarez/typescript.nvim' -- additional tools like renaming
   use 'onsails/lspkind.nvim' -- VS Code like icons to autocompletion window
+
+  -- formatting and linting
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jayp0521/mason-null-ls.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
