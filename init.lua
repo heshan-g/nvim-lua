@@ -10,6 +10,7 @@ require('plugin-configs.lsp.lspconfig')
 require('plugin-configs.lsp.null-ls')
 require('plugin-configs.autopairs')
 require('plugin-configs.treesitter')
+require('plugin-configs.gitsigns')
 
 require('configs.options')
 require('configs.keymaps')
