@@ -86,6 +86,6 @@ require('bufferline').setup({
             --     -- add custom logic
             --     return buffer_a.modified > buffer_b.modified
             -- end
-           sort_by = 'insert_after_current'
+           sort_by = 'insert_at_end'
   }
 })
