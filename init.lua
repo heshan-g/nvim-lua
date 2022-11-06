@@ -15,6 +15,5 @@ require('plugin-configs.bufferline')
 
 require('configs.options')
 require('configs.keymaps')
-
-vim.cmd.colorscheme('nightfly');
+require('configs.commands')
 
