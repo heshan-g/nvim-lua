@@ -10,6 +10,7 @@ vim.keymap.set('n', 'x', '"_x') -- deleting characters using 'x' will not copy t
 vim.keymap.set({ 'n', 'v', 'i' }, '<leader>e', ':NvimTreeFindFileToggle<CR>')
 vim.keymap.set({ 'n', 'v', 'i' }, '<c-L>', '<cmd>bnext<cr>')
 vim.keymap.set({ 'n', 'v', 'i' }, '<c-H>', '<cmd>bprev<cr>')
+vim.keymap.set({ 'n', 'v', 'i',}, '<leader>q', '<cmd>Bdelete<cr>')
 
 -- Telescope
 vim.keymap.set({ 'n', 'v', 'i' }, '<c-p>', '<cmd>Telescope find_files<cr>') -- find files within current working directory, respects .gitignore

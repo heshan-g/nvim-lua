@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/heshan/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["bufdelete.nvim"] = {
+    loaded = true,
+    path = "/Users/heshan/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
+    url = "https://github.com/famiu/bufdelete.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/heshan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",

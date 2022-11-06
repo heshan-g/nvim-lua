@@ -75,6 +75,7 @@ return require('packer').startup(function(use)
 
   -- bufferline
   use 'akinsho/bufferline.nvim'
+  use 'famiu/bufdelete.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
